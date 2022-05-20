@@ -16,17 +16,6 @@ input_123Info = pd.read_excel('./论文数据/附件1：123家有信贷记录企
 output_123Info = pd.read_excel('./论文数据/附件1：123家有信贷记录企业的相关数据.xlsx',
                                sheet_name=2, index_col=('企业代号'))
 
-enterprise_302Info = pd.read_excel('./论文数据/附件2：302家无信贷记录企业的相关数据.xlsx',
-                                   sheet_name=0, index_col=('企业代号'))
-input_302Info = pd.read_excel('./论文数据/附件2：302家无信贷记录企业的相关数据.xlsx',
-                              sheet_name=2, index_col=('企业代号'))
-output_302Info = pd.read_excel('./论文数据/附件2：302家无信贷记录企业的相关数据.xlsx',
-                               sheet_name=1, index_col=('企业代号'))
-
-interest_loss_corr = pd.read_excel('./论文数据/附件3：银行贷款年利率与客户流失率关系的统计数据.xlsx',
-                                   sheet_name=0,names=(['贷款年利率', '信誉评级A', '信誉评级B', '信誉评级C']),index_col=('贷款年利率'),skiprows=([1]))
-
-
 #%% 预处理1——查找缺失值  无缺失值
 input_123Info.info()
 output_123Info.info()
